@@ -1,0 +1,60 @@
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 32px;
+  margin: 0 48px 32px 48px;
+  padding: 48px 48px 24px 48px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+  min-height: 340px;
+  position: relative;
+}
+.heroText {
+  flex: 1;
+}
+.heroRole {
+  font-size: 0.9rem;
+  color: #888;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.heroSection h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 16px 0 0 0;
+  line-height: 1.1;
+}
+.highlight {
+  color: #e94f6b;
+}
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.heroImage img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  border: 8px solid #fff;
+}
+
+/* Dark mode for hero section */
+:global(.portfolio-bg.dark) .heroSection {
+  background: #2d2d2d;
+  color: #fff;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+  /* Add any other shared styles here */
+}
+:global(.portfolio-bg.dark) .heroSection h1,
+:global(.portfolio-bg.dark) .highlight {
+  color: #e94f6b;
+}
+:global(.portfolio-bg.dark) .heroSection .heroSubtitle,
+:global(.portfolio-bg.dark) .heroSection .heroRole {
+  color: #ccc;
+}

@@ -1,0 +1,101 @@
+.portfolioHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 48px;
+  background: #fff;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e94f6b;
+  letter-spacing: 2px;
+}
+
+.logo img {
+  height: 30px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #e94f6b;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconLink {
+  color: #222;
+  font-size: 1.2rem;
+  margin-right: 8px;
+  transition: color 0.2s;
+}
+
+.iconLink:hover {
+  color: #e94f6b;
+}
+
+.resumeButton {
+  background-color: #e94f6b;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.resumeButton:hover {
+  background-color: #d83f5b;
+}
+
+/* Dark mode */
+:global(.portfolio-bg.dark) .portfolioHeader {
+  background: #2d2d2d;
+  color: #fff;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+}
+
+:global(.portfolio-bg.dark) .navLink,
+:global(.portfolio-bg.dark) .iconLink {
+  color: #fff;
+}
+
+:global(.portfolio-bg.dark) .navLink:hover,
+:global(.portfolio-bg.dark) .iconLink:hover {
+  color: #e94f6b;
+}
+
+:global(.portfolio-bg.dark) .resumeButton {
+  background-color: #e94f6b;
+  color: #fff;
+}
+
+:global(.portfolio-bg.dark) .resumeButton:hover {
+  background-color: #d83f5b;
+}

@@ -1,0 +1,32 @@
+.contactSection {
+  background: #fff;
+  border-radius: 32px;
+  margin: 0 48px 48px 48px;
+  padding: 32px 48px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+}
+.contactSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.contactDetails p {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 8px 0;
+}
+.contactDetails a {
+  color: #e94f6b;
+  text-decoration: none;
+}
+.contactDetails a:hover {
+  text-decoration: underline;
+}
+/* Dark mode */
+:global(.dark) .contactSection {
+  background: #2d2d2d;
+  color: #fff;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+}
+:global(.dark) .contactDetails p {
+  color: #ccc;
+}

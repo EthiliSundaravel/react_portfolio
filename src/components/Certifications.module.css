@@ -1,0 +1,30 @@
+.certificationsSection {
+  background: #fff;
+  border-radius: 32px;
+  margin: 0 48px 32px 48px;
+  padding: 32px 48px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+}
+.certificationsSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.certificationsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.certificationCard {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+/* Dark mode */
+:global(.dark) .certificationsSection {
+  background: #2d2d2d;
+  color: #fff;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+}
+.dark .certificationCard {
+  border-bottom-color: #444;
+}

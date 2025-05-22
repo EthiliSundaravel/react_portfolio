@@ -1,13 +1,119 @@
-body {
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Global resets and typography */
+body, html, #root, .portfolio-bg {
+  min-height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #181952;
+  color: #222;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
 }
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Layout wrapper */
+.portfolio-bg {
+  background: #181952;
+  min-height: 100vh;
+}
+
+/* Dark mode for layout */
+.portfolio-bg.dark {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.portfolio-bg.dark h1,
+.portfolio-bg.dark h2,
+.portfolio-bg.dark h3 {
+  color: #fff;
+}
+
+/* Add padding to main content to prevent overlap with fixed header */
+main {
+  padding-top: 70px; /* Adjust this value based on your header's height */
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: #e94f6b;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: #d13d57;
+  transform: translateY(-2px);
+}
+
+.portfolio-bg.dark .theme-toggle {
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.portfolio-bg.dark .theme-toggle:hover {
+  background: #e0e0e0;
+}
+
+/* Responsive layout for tablets */
+@media (max-width: 900px) {
+  .App {
+    padding: 10px;
+    max-width: 100%;
+  }
+  main {
+    padding-top: 60px;
+  }
+}
+
+/* Responsive layout for mobile devices */
+@media (max-width: 600px) {
+  .App {
+    padding: 4px;
+    max-width: 100%;
+  }
+  main {
+    padding-top: 50px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
+
