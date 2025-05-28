@@ -15,31 +15,31 @@ This portfolio is broken down into several reusable React components, each with 
   *Implemented in `Header.js` with styles in `Header.module.css`.*
 
 - **HomeSection**  
-  The hero/introduction section with your name, title, and profile image.  
+  The hero/introduction section with name, title, and profile image.  
   *Implemented in `HomeSection.js` with styles in `HomeSection.module.css`.*
 
 - **About**  
-  Contains a summary about you and your profile image.  
+  Contains a summary and profile image.  
   *Implemented in `About.js` with styles in `About.module.css`.*
 
 - **Experience**  
-  Lists your work experience, each as a card or list item.  
+  Lists work experience, each as a card or list item.  
   *Implemented in `Experience.js` with styles in `Experience.module.css`.*
 
 - **Certifications**  
-  Displays your certifications.  
+  Displays  certifications.  
   *Implemented in `Certifications.js` with styles in `Certifications.module.css`.*
 
 - **Education**  
-  Shows your educational background.  
+  Shows educational background.  
   *Implemented in `Education.js` with styles in `Education.module.css`.*
 
 - **Skills**  
-  Lists your skills, often as badges or a grid.  
+  Lists skills, often as badges or a grid.  
   *Implemented in `Skills.js` with styles in `Skills.module.css`.*
 
 - **Contact**  
-  Displays your contact information (email, phone, LinkedIn, etc.).  
+  Displays contact information (email, phone, LinkedIn, etc.).  
   *Implemented in `Contact.js` with styles in `Contact.module.css`.*
 
 ---
@@ -109,48 +109,55 @@ This portfolio is broken down into several reusable React components, each with 
 
     const [darkMode, setDarkMode] = useState(false);
   
+  ``` jsx
   <button
     className="theme-toggle"
     onClick={() => setDarkMode(prev => !prev)}
   >
     {darkMode ? "Light Mode" : "Dark Mode"}
   </button>
+  ```
 
 - **Conditional Rendering:**  
   - Used for toggling dark mode class and button text based on state.
 
+    ``` jsx
     <div className={`portfolio-bg ${darkMode ? 'dark' : ''}`}>
     {/* ... */}
     <button>
       {darkMode ? "Light Mode" : "Dark Mode"}
     </button>
     </div>
+    ```
   
 - **Dynamic Lists with `.map()`:**  
   - Used in `Experience.js`, `Certifications.js`, and `Skills.js` to render lists from arrays.
 
+    ``` js
     experiences.map(exp => (
     <div key={exp.id}>{exp.title}</div>
-  ))
-  skills.map(skill => (
+    ))
+    skills.map(skill => (
     <li key={skill}>{skill}</li>
-  ))
-
+    ))
+    ```
 - **Styling:**  
   - All section/component styles use CSS Modules for modular, scoped styling.
 
 - **Responsive Layout:**  
   - Mobile-friendly with breakpoints via CSS media queries in `index.css`.
 
+    ``` css
     @media (max-width: 900px) {
     .App { padding: 10px; max-width: 100%; }
     main { padding-top: 60px; }
-  }
-  @media (max-width: 600px) {
+    }
+    @media (max-width: 600px) {
     .App { padding: 4px; max-width: 100%; }
     main { padding-top: 50px; }
     h1 { font-size: 1.5rem; }
-  }
+    }
+    ```
 
 - **Resume Content:**  
   - Includes education, skills, experience, and contact information.
