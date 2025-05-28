@@ -88,10 +88,83 @@ This portfolio is broken down into several reusable React components, each with 
 
 ---
 
-## 📁 Getting Started
+## ✅ Project Checklist & Implementation Summary
 
-1. **Install dependencies:**  
-   `npm install`
-2. **Run locally:**  
-   `npm start`
+- **Created with:** `create-react-app`
+- **Component Structure:**  
+  Resume is broken down into 8+ reusable components: `Header`, `HomeSection`, `About`, `Experience`, `Certifications`, `Education`, `Skills`, `Contact`.
+- **Folder Organization:**  
+  All components and their CSS modules are cleanly organized into folders.
+- **Props Usage:**  
+  - `profileImage` (App → About): Profile picture URL.
+  - `contactInfo` (App → Contact): Object with email, phone, LinkedIn.
+  - `profilePicUrl` (App → HomeSection): Profile image for hero section.
+
+  <About profileImage={profilePicUrl} />
+  <Contact contactInfo={contactDetails} />
+  <HomeSection profilePicUrl={profilePicUrl} />
+
+- **State Management:**  
+  - `useState` is used in `App.js` to control dark/light theme toggle.
+
+    const [darkMode, setDarkMode] = useState(false);
+  
+  <button
+    className="theme-toggle"
+    onClick={() => setDarkMode(prev => !prev)}
+  >
+    {darkMode ? "Light Mode" : "Dark Mode"}
+  </button>
+
+- **Conditional Rendering:**  
+  - Used for toggling dark mode class and button text based on state.
+
+    <div className={`portfolio-bg ${darkMode ? 'dark' : ''}`}>
+    {/* ... */}
+    <button>
+      {darkMode ? "Light Mode" : "Dark Mode"}
+    </button>
+    </div>
+  
+- **Dynamic Lists with `.map()`:**  
+  - Used in `Experience.js`, `Certifications.js`, and `Skills.js` to render lists from arrays.
+
+    experiences.map(exp => (
+    <div key={exp.id}>{exp.title}</div>
+  ))
+  skills.map(skill => (
+    <li key={skill}>{skill}</li>
+  ))
+
+- **Styling:**  
+  - All section/component styles use CSS Modules for modular, scoped styling.
+
+- **Responsive Layout:**  
+  - Mobile-friendly with breakpoints via CSS media queries in `index.css`.
+
+    @media (max-width: 900px) {
+    .App { padding: 10px; max-width: 100%; }
+    main { padding-top: 60px; }
+  }
+  @media (max-width: 600px) {
+    .App { padding: 4px; max-width: 100%; }
+    main { padding-top: 50px; }
+    h1 { font-size: 1.5rem; }
+  }
+
+- **Resume Content:**  
+  - Includes education, skills, experience, and contact information.
+- **Deployment:**  
+  - Live on Vercel: [ethili-sundaravel.vercel.app](https://ethili-sundaravel.vercel.app/)
+- **Version Control:**  
+  - Public GitHub repo: [github.com/EthiliSundaravel/react_portfolio](https://github.com/EthiliSundaravel/react_portfolio/)
+- **README:**  
+  - This file describes technologies used and deployment/design challenges.
+- **Navigation:**  
+  - Working navigation with smooth scrolling between sections.
+- **Custom Domain:**  
+  - Uses custom Vercel domain: [ethili-sundaravel.vercel.app](https://ethili-sundaravel.vercel.app/)
+
+---
+
 
